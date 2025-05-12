@@ -380,3 +380,7 @@ FodyWeavers.xsd
 **/.DS_Store
 
 .idea/
+
+# Cfg files
+**/appsettings.*.json
+**/launchSettings.json
