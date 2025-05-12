@@ -1,0 +1,29 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "RailwaySections.Contracts.Grpc.Impl.RailwaySections";
+
+service RailwayMicroservice {
+  rpc GetRailwaySection (GetRailwaySectionRequest) returns (GetRailwaySectionResponse);
+}
+
+message GetRailwaySectionRequest {
+  string Id = 1;
+}
+
+message GetRailwaySectionResponse {
+  bool Succes = 1;
+  oneof Result {
+    RailwaySection Section = 2;
+    Error Error = 3;
+  }
+}
+
+message RailwaySection {
+  string Id = 1;
+}
+
+
+message Error {
+  string Message = 1;
+  optional string AdditionalDetails = 2;
+}
