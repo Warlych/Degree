@@ -382,5 +382,6 @@ FodyWeavers.xsd
 .idea/
 
 # Cfg files
+**/appsettings.json
 **/appsettings.*.json
 **/launchSettings.json
